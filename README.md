@@ -25,6 +25,15 @@ It highlights:
 | **deductions** *(future)* | Payroll deduction details |
 | **bonuses** *(future)*    | Bonus award details |
 
+<img width="449" height="252" alt="departments" src="https://github.com/user-attachments/assets/a5ce502c-9fd5-4495-ad1b-724a5afbde56" />
+
+<img width="897" height="255" alt="payrol table" src="https://github.com/user-attachments/assets/def00ea6-2355-4fd0-ade7-509ae9da813c" />
+
+<img width="1056" height="286" alt="employees" src="https://github.com/user-attachments/assets/7a8c210d-dcf3-44f5-ac86-37d54d28e6cc" />
+
+<img width="887" height="273" alt="performance review" src="https://github.com/user-attachments/assets/cdbe8142-980e-4793-8285-0b8b947ec0fb" />
+
+
 ## 📈 Key Reports & Analytics
 
 ### 1. Average Performance Score by Department
@@ -43,6 +52,8 @@ GROUP BY
 ORDER BY
     average_score DESC;
 ```
+<img width="440" height="152" alt="query1" src="https://github.com/user-attachments/assets/b33687e0-a387-43d9-b5da-5033a1b3647b" />
+
 
 ### 2. Total Monthly Payroll by Department
 ```sql
@@ -60,6 +71,8 @@ WHERE
 GROUP BY
     d.department_name;
 ```
+<img width="643" height="234" alt="query2" src="https://github.com/user-attachments/assets/8a287cf3-b42c-4c24-8a88-1583240c8031" />
+
 
 ### 3. Employees with Below-Average Department Salary
 ```sql
@@ -73,19 +86,10 @@ FROM
 WHERE
     salary < (SELECT AVG(salary) FROM employees WHERE department_id = e.department_id);
 ```
+<img width="704" height="177" alt="query3" src="https://github.com/user-attachments/assets/cab79a2e-7ecc-4eab-95c8-964adb34c906" />
 
 ## 🛠️ Technologies Used
 - MySQL
 - MySQL Workbench
 
-## 📂 How to Run
-1. Clone the repository:
-```bash
-git clone https://github.com/YourUsername/Employee-Payroll-System-SQL.git
-```
-2. Open `sql/employee_payroll_project.sql` in MySQL Workbench
-3. Execute the script to:
-   - Create tables
-   - Insert sample data
-   - Create `calculate_payroll` stored procedure
-4. Run the queries for insights
+
